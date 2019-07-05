@@ -10,9 +10,9 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME = whatever
+NAME = array
 
-SRC =	whatever.cpp 
+SRC =	main.cpp 
 
 OBJ = $(SRC:.cpp=.o)
 

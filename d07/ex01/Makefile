@@ -10,9 +10,9 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME = whatever
+NAME = iter
 
-SRC =	whatever.cpp 
+SRC =	iter.cpp 
 
 OBJ = $(SRC:.cpp=.o)
 
