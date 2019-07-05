@@ -1,88 +1,82 @@
-#include "Span.hpp"
-
-Span(unsigned int n = 0)
-	:	ints_(new int[n]), begin_(&ints_[0]), end_(begin_ + n), iterator_(begin_) {}
-
-Span(int const &begin, int const &end):  {}
-
-Span(Span const &oth)
-	:	ints_(new int[oth.end_ - oth.begin_]), begin_(&ints_[0]), 
-		end_(begin_ + oth.end_ - oth.begin_) {
-			for (iterator_ = begin_; iterator_ <= oth.iterator_; ++iterator_) {
-				*iterator_ = 
-			}
-		}
-
-~Span() {
-	delete [] ints_;
-}
-
-Span			&operator=(Span const &oth);
-void			addNumber(int nb);
-unsigned int	shortestSpan(void);
-unsigned int	longestSpan(void);
+#include <iterator>
+#include "span.hpp"
 
 #include <iostream>
-#include "Span.hpp"
+
 
 Span::Span(unsigned int size):
-	_datas(size)
-{
-	_data_count = 0;
+	ivec_(), size_(size), iter_(0) {
+		ivec_.resize(size_);
+	}
+
+Span::Span(Span const &oth): 
+	ivec_(oth.ivec_), size_(oth.size_), iter_(oth.iter_) {}
+
+Span::~Span(void) {
+	ivec_.clear();
 }
 
-Span::Span(Span const &src)
+Span		&Span::operator=(Span const &oth)
 {
-	*this = src;
-}
-
-Span::~Span(void)
-{}
-
-Span				&Span::operator=(Span const &rhs)
-{
-	_datas = rhs._datas;
+	if (this != &oth) {
+		this->~Span();
+		ivec_ = oth.ivec_;
+		size_ = oth.size_;
+		iter_ = oth.iter_;
+	}
 	return (*this);
 }
 
-void				Span::addNumber(int number) throw(SpanFullException)
+void		Span::addNumber(int nb)
 {
-	if (_data_count >= _datas.size())
-		throw (SpanFullException());
-	_datas[_data_count] = number;
-	_data_count++;
+	if (iter_ >= ivec_.size())
+		throw (OutOfRange());
+	ivec_[iter_] = nb;
+	++iter_;
 }
 
-void				Span::addNumber(
-						std::vector<int>::iterator it,
-						std::vector<int>::iterator end
-					) throw(SpanFullException)
+void		Span::addNumber(std::vector<int>::iterator const &begin,
+							std::vector<int>::iterator const &end)
 {
-	if (_data_count + std::distance(it, end) >= static_cast<int>(_datas.size()))
-		throw (SpanFullException());
+	if (iter_ + static_cast<unsigned int>(std::distance(begin, end)) >= ivec_.size())
+		throw (OutOfRange());
+	std::vector<int>::iterator it = begin;
 	while (it != end)
 	{
-		_datas[_data_count] = *it;
-		++_data_count;
+		ivec_[iter_] = *it;
+		++iter_;
 		++it;
 	}
 }
 
-int					Span::shortestSpan(void)
+unsigned int			Span::shortestSpan(void)
 {
-	std::vector<int>::iterator	it = _datas.begin();
-	return (*std::min_element(it, it + _data_count));
+	if (iter_ <= 1)
+		throw (NoSpan());
+	std::vector<int> sorted(ivec_);
+	std::sort(sorted.begin(), sorted.end());
+	return (std::abs(sorted[1] - sorted[0]));
 }
 
-int					Span::longestSpan(void)
+unsigned int			Span::longestSpan(void)
 {
-	std::vector<int>::iterator	it = _datas.begin();
-	return (*std::max_element(it, it + _data_count));
+	if (iter_ <= 1)
+		throw (NoSpan());
+	std::vector<int> sorted(ivec_);
+	std::sort(sorted.begin(), sorted.end());
+	return (std::abs(sorted[sorted.size() - 1] - sorted[0]));
 }
 
-					Span::SpanFullException::SpanFullException(void) {}
-					Span::SpanFullException::~SpanFullException(void) throw() {}
-char const			*Span::SpanFullException::what(void) const throw()
+			Span::OutOfRange::OutOfRange(void) {}
+			Span::OutOfRange::~OutOfRange(void) throw() {}
+char const	*Span::OutOfRange::what(void) const throw()
 {
-	return ("Span full");
+	return ("Out of range");
+}
+
+			Span::NoSpan::NoSpan(void) {}
+			Span::NoSpan::~NoSpan(void) throw() {}
+char const	*Span::NoSpan::what(void) const throw()
+{
+	return ("No span to find");
 }

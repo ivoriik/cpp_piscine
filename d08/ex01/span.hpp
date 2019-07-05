@@ -1,31 +1,37 @@
 #ifndef SPAN_CPP
 #define SPAN_CPP
 
+#include <vector>
 #include <exception>
 
 class Span {
 private:
-	std::vector<int>	_ivec;
-	unsigned int		_size;
-	unsigned int		_iter;
+	std::vector<int>	ivec_;
+	unsigned int		size_;
+	unsigned int		iter_;
 
 public:
 	Span(unsigned int n = 0);
 	Span(Span const &oth);
 	~Span();
 	Span			&operator=(Span const &oth);
-	void			addNumber(int nb) throw(Exception);
+	void			addNumber(int nb);
 	void			addNumber(std::vector<int>::iterator const &begin, 
-						std::vector<int>::iterator const &end) throw(Exception);
+						std::vector<int>::iterator const &end);
 	unsigned int	shortestSpan(void);
 	unsigned int	longestSpan(void);
-	class			Exception: public std::exception
-	{
-		public:
-								Exception(void);
-								~Exception(void) throw();
-		char const				*what(void) const throw();
+	class			OutOfRange: public std::exception {
+	public:
+					OutOfRange(void);
+					~OutOfRange(void) throw();
+		char const	*what(void) const throw();
 	};
-}
+	class			NoSpan: public std::exception {
+	public:
+					NoSpan(void);
+					~NoSpan(void) throw();
+		char const	*what(void) const throw();
+	};
+};
 
 #endif
