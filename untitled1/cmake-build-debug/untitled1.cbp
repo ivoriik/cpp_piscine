@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="untitled1"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/ivoriik/CLionProjects/untitled1/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/ivoriik/CLionProjects/untitled1/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/ivoriik/CLionProjects/untitled1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/ivoriik/CLionProjects/untitled1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/ivoriik/CLionProjects/untitled1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/ivoriik/CLionProjects/untitled1/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/ivoriik/CLionProjects/untitled1/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/ivoriik/CLionProjects/untitled1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/ivoriik/CLionProjects/untitled1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/ivoriik/CLionProjects/untitled1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="untitled1">
+				<Option output="/home/ivoriik/CLionProjects/untitled1/cmake-build-debug/untitled1" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/ivoriik/CLionProjects/untitled1/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/ivoriik/CLionProjects/untitled1/cmake-build-debug/Makefile&quot;  VERBOSE=1 untitled1"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/ivoriik/CLionProjects/untitled1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/ivoriik/CLionProjects/untitled1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/ivoriik/CLionProjects/untitled1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="untitled1/fast">
+				<Option output="/home/ivoriik/CLionProjects/untitled1/cmake-build-debug/untitled1" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/ivoriik/CLionProjects/untitled1/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/ivoriik/CLionProjects/untitled1/cmake-build-debug/Makefile&quot;  VERBOSE=1 untitled1/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/ivoriik/CLionProjects/untitled1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/ivoriik/CLionProjects/untitled1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/ivoriik/CLionProjects/untitled1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/ivoriik/CLionProjects/untitled1/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/ivoriik/CLionProjects/untitled1/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/ivoriik/CLionProjects/untitled1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/ivoriik/CLionProjects/untitled1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/ivoriik/CLionProjects/untitled1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/ivoriik/CLionProjects/untitled1/CpuModule.cpp">
+			<Option target="untitled1"/>
+		</Unit>
+		<Unit filename="/home/ivoriik/CLionProjects/untitled1/CpuModule.hpp">
+			<Option target="untitled1"/>
+		</Unit>
+		<Unit filename="/home/ivoriik/CLionProjects/untitled1/DateModule.cpp">
+			<Option target="untitled1"/>
+		</Unit>
+		<Unit filename="/home/ivoriik/CLionProjects/untitled1/DateModule.hpp">
+			<Option target="untitled1"/>
+		</Unit>
+		<Unit filename="/home/ivoriik/CLionProjects/untitled1/DiskModule.hpp">
+			<Option target="untitled1"/>
+		</Unit>
+		<Unit filename="/home/ivoriik/CLionProjects/untitled1/HostModule.cpp">
+			<Option target="untitled1"/>
+		</Unit>
+		<Unit filename="/home/ivoriik/CLionProjects/untitled1/HostModule.hpp">
+			<Option target="untitled1"/>
+		</Unit>
+		<Unit filename="/home/ivoriik/CLionProjects/untitled1/IMonitorDisplay.hpp">
+			<Option target="untitled1"/>
+		</Unit>
+		<Unit filename="/home/ivoriik/CLionProjects/untitled1/IMonitorModule.hpp">
+			<Option target="untitled1"/>
+		</Unit>
+		<Unit filename="/home/ivoriik/CLionProjects/untitled1/NcursesMode.cpp">
+			<Option target="untitled1"/>
+		</Unit>
+		<Unit filename="/home/ivoriik/CLionProjects/untitled1/NcursesMode.hpp">
+			<Option target="untitled1"/>
+		</Unit>
+		<Unit filename="/home/ivoriik/CLionProjects/untitled1/NetModule.cpp">
+			<Option target="untitled1"/>
+		</Unit>
+		<Unit filename="/home/ivoriik/CLionProjects/untitled1/NetModule.hpp">
+			<Option target="untitled1"/>
+		</Unit>
+		<Unit filename="/home/ivoriik/CLionProjects/untitled1/OsModule.cpp">
+			<Option target="untitled1"/>
+		</Unit>
+		<Unit filename="/home/ivoriik/CLionProjects/untitled1/OsModule.hpp">
+			<Option target="untitled1"/>
+		</Unit>
+		<Unit filename="/home/ivoriik/CLionProjects/untitled1/ProcessModule.hpp">
+			<Option target="untitled1"/>
+		</Unit>
+		<Unit filename="/home/ivoriik/CLionProjects/untitled1/RamModule.cpp">
+			<Option target="untitled1"/>
+		</Unit>
+		<Unit filename="/home/ivoriik/CLionProjects/untitled1/RamModule.hpp">
+			<Option target="untitled1"/>
+		</Unit>
+		<Unit filename="/home/ivoriik/CLionProjects/untitled1/SdlMode.cpp">
+			<Option target="untitled1"/>
+		</Unit>
+		<Unit filename="/home/ivoriik/CLionProjects/untitled1/SdlMode.hpp">
+			<Option target="untitled1"/>
+		</Unit>
+		<Unit filename="/home/ivoriik/CLionProjects/untitled1/main.cpp">
+			<Option target="untitled1"/>
+		</Unit>
+		<Unit filename="/home/ivoriik/CLionProjects/untitled1/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
